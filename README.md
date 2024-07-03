@@ -117,6 +117,11 @@ For experiments containing multiple biological replicates, transcript level (and
     rf-fold -sl 2.4 -in -0.2 -md 600 -nlp -dp -sh -g DMS_MaPseq_merge/
     rf-fold -sl 2.4 -in -0.2 -md 600 -nlp -dp -sh -g MD_MaPseq_merge/
     
+## Contact information
+
+Ping Li: liping6434(at)126.com
+Yiyuan Li: liyiyuan(at)nbu.edu.cn
+
 ## Citation:
 Li P, Li J, Ma Y, Ma L, Wang X, and Li Y, 2024, RNA Structural and Transcriptional Changes in Genes Associated with Redox Homeostasis are Responsible for DNA Damage. 
 
