@@ -39,17 +39,7 @@ https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-57/fasta/arabidopsis_tha
     bowtie2-build reference_sorted.fasta reference_sorted
 
 ## 4. rf-map, mapping of DMS-MaPseq reads
-    # The “-ca3” parameter defines the adapter sequence to clip at the 30 end of reads. With paired-end experiments, a 50 adapter sequence can also be provided via the “-ca5” parameter (this sequence will be automatically reverse-complemented).
 
-    # Therefore, quality trimming of 50 end can be performed through the “-cq5” parameter.
-
-    # we will use rf-map and Bowtie v2 (enabled by the “-b2” flag):
-
-    # Since we are using Bowtie v2 for read mapping, it is important to pick the right reference index folder (note the “_bt2” suffix).
-
-    # Even though RNA Framework comes with a lot of built-in options, specific mapping parameters can be provided to Bowtie through the “-mp” parameter. In this example, we are directly invoking Bowtie v2 with the “--very-sensitive-local” preset, that causes Bowtie to extensively look for the top-scoring local alignment.
-
-    rf-map --overwrite -p 8 -wt 5 -b2 -cq5 20 -ca3 TCGTATGCCGTCTTCTGCTTG -mp '--very-sensitive-local' -bi reference_sorted -o rf_map_mapseq --keep-logs *.fq.gz
     for i in 
     do
      # map paired-end reads, add read groups
