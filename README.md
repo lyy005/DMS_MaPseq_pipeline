@@ -121,7 +121,7 @@ For experiments containing multiple biological replicates, transcript level (and
 
 Ping Li: liping6434(at)126.com
 
-Yiyuan Li: liyiyuan(at)nbu.edu.cn
+Yiyuan Li: lyy0005(at)gmail.com
 
 ## Citation:
 Li P, Li J, Ma Y, Ma L, Wang X, and Li Y, 2024, RNA Structural and Transcriptional Changes in Genes Associated with Redox Homeostasis are Responsible for DNA Damage. 
