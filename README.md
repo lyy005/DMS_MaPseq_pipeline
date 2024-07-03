@@ -7,11 +7,10 @@ The RNA Framework pipeline can be used for DMS-seq OR DMS-MaPseq data. But the p
 <img width="649" alt="image" src="https://github.com/lyy005/DMS_MaPseq_pipeline/assets/5472908/df2c42e0-fc73-480f-b615-236567dae590">
 
 ## 2. Our samples: 
-MMS is for methyl methanesulfonate
 
-DMS is for dimethyl sulfate
+MMS is for methyl methanesulfonate, and DMS is for dimethyl sulfate
 
-We have 8 samples in total:
+**We have 8 samples in total:**
 
 3 DMS treated samples: DMS1, DMS2, DMS3
 
