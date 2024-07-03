@@ -1,4 +1,4 @@
-![image](https://github.com/lyy005/DMS_MaPseq_pipeline/assets/5472908/74e88554-c223-464c-96a6-81e6299631f8)# DMS_MaPseq_pipeline
+# DMS_MaPseq_pipeline
 We used RNA framework version 2.8.6 (https://github.com/dincarnato/RNAFramework) in our study and followed the pipeline from Marinus and Incarnato. 2021. RNA Framework for Assaying the Structure of RNAs by High-Throughput Sequencing. RNA Bioinformatics. https://link.springer.com/protocol/10.1007/978-1-0716-1307-8_5
 
 ## 1. Our workflow
