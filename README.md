@@ -25,7 +25,7 @@ https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-57/fasta/arabidopsis_tha
 ## 3. rf-map, mapping of DMS-MaPseq reads
     # The “-ca3” parameter defines the adapter sequence to clip at the 30 end of reads. With paired-end experiments, a 50 adapter sequence can also be provided via the “-ca5” parameter (this sequence will be automatically reverse-complemented).
 
-    # Therefore, also quality trimming of 50 end can be performed through the “-cq5” parameter.
+    # Therefore, quality trimming of 50 end can be performed through the “-cq5” parameter.
 
     # we will use rf-map and Bowtie v2 (enabled by the “-b2” flag):
 
@@ -70,11 +70,29 @@ Compared to default settings, we changed -n from 1000 to 5, -ec from 10 to 0 to 
     done
 
 ## 6. rf-correlate, check for correlation between samples
-For experiments containing multiple biological replicates, tran- script level (and experiment level) pairwise Pearson correlations can be assessed with the rf-correlate tool, by
+For experiments containing multiple biological replicates, transcript level (and experiment level) pairwise Pearson correlations can be assessed with the rf-correlate tool, by
     
     # check correlation
+    # DMS samples
     rf-correlate -m 0.1 ./DMS1_vs_CK_norm/ DMS2_vs_CK_norm/ --overwrite -o DMS1_vs_DMS2
+    rf-correlate -m 0.1 ./DMS1_vs_CK_norm/ DMS3_vs_CK_norm/ --overwrite -o DMS1_vs_DMS3
+    rf-correlate -m 0.1 ./DMS2_vs_CK_norm/ DMS3_vs_CK_norm/ --overwrite -o DMS2_vs_DMS3
 
+    # MD samples
+    rf-correlate -m 0.1 MD1.sorted_vs_MMSCK.sorted_norm/ MD2.sorted_vs_MMSCK.sorted_norm/ --overwrite -o MD1_vs_MD2
+    rf-correlate -m 0.1 MD1.sorted_vs_MMSCK.sorted_norm/ MD3.sorted_vs_MMSCK.sorted_norm/ --overwrite -o MD1_vs_MD3
+    rf-correlate -m 0.1 MD2.sorted_vs_MMSCK.sorted_norm/ MD3.sorted_vs_MMSCK.sorted_norm/ --overwrite -o MD2_vs_MD3
+
+## 7. rf-combine, combined biological replicates
+    
+    rf-combine -m 0.1 -o DMS_MaPseq_merge DMS1.sorted_vs_CKH2O.sorted_norm/ DMS2.sorted_vs_CKH2O.sorted_norm/ DMS3.sorted_vs_CKH2O.sorted_norm/
+    rf-combine -m 0.1 -o MD_MaPseq_merge MD1.sorted_vs_MMSCK.sorted_norm/ MD2.sorted_vs_MMSCK.sorted_norm/ MD3.sorted_vs_MMSCK.sorted_norm/
+    
+## 8. rf-fold, fold RNAs
+
+    rf-fold -sl 2.4 -in -0.2 -md 600 -nlp -dp -sh -g DMS_MaPseq_merge/
+    rf-fold -sl 2.4 -in -0.2 -md 600 -nlp -dp -sh -g MD_MaPseq_merge/
+    
 ## Citation:
 Li P, Li J, Ma Y, Ma L, Wang X, and Li Y, 2024, RNA Structural and Transcriptional Changes in Genes Associated with Redox Homeostasis are Responsible for DNA Damage. 
 
