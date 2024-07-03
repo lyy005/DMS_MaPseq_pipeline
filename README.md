@@ -65,12 +65,13 @@ Compared to default settings, we changed -n from 1000 to 5, -ec from 10 to 0 to 
     for f in ./rf_count_seq/DMS*.rc 
     do
 
-    rf-norm -rb AC -sm 3 -nm 3 -ec 0 -n 5 -i ./rf_count_seq/index.rci -t $f -u ./rf_count_seq/CK.rc --processors 10 --overwrite -o ./rf_norm/
+     rf-norm -rb AC -sm 3 -nm 3 -ec 0 -n 5 -i ./rf_count_seq/index.rci -t $f -u ./rf_count_seq/CK.rc --processors 10 --overwrite -o ./rf_norm/
 
     done
 
 ## 6. rf-correlate, check for correlation between samples
 For experiments containing multiple biological replicates, tran- script level (and experiment level) pairwise Pearson correlations can be assessed with the rf-correlate tool, by
+    
     # check correlation
     rf-correlate -m 0.1 ./DMS1_vs_CK_norm/ DMS2_vs_CK_norm/ --overwrite -o DMS1_vs_DMS2
 
