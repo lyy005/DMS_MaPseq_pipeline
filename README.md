@@ -1,5 +1,5 @@
-![image](https://github.com/lyy005/DMS_MaPseq_pipeline/assets/5472908/fdb1cce8-9b00-4ddb-be4e-6904ab5666a6)![image](https://github.com/lyy005/DMS_MaPseq_pipeline/assets/5472908/c8329096-942c-4dd3-8ba7-ccf155c7a937)# DMS_MaPseq_pipeline
-We used RNA framework (https://github.com/dincarnato/RNAFramework) in our study and followed the pipeline from Marinus and Incarnato. 2021. RNA Framework for Assaying the Structure of RNAs by High-Throughput Sequencing. RNA Bioinformatics. https://link.springer.com/protocol/10.1007/978-1-0716-1307-8_5
+# DMS_MaPseq_pipeline
+We used RNA framework version 2.8.6 (https://github.com/dincarnato/RNAFramework) in our study and followed the pipeline from Marinus and Incarnato. 2021. RNA Framework for Assaying the Structure of RNAs by High-Throughput Sequencing. RNA Bioinformatics. https://link.springer.com/protocol/10.1007/978-1-0716-1307-8_5
 
 ## 1. Our workflow
 The RNA Framework pipeline can be used for DMS-seq OR DMS-MaPseq data. But the parameters are different. So when running the pipeline, we set the parameters for DMS-MaPseq as suggested. If your data is not DMS-MaPseq, please refer to Marinus and Incarnato. 2021 OR Zubradt et al. 2016. DMS-MaPseq for genome-wide or targeted RNA structure probing in vivo. Nature. 
